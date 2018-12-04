@@ -1,0 +1,817 @@
+
+@import './base.less';
+
+// 手机导航
+.telnavs {
+    display: none;
+}
+
+// 顶部导航
+.topnavs {
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+
+    ul {
+        display: flex;
+        width: 980px;
+        margin: 0 auto;
+        line-height: 40px;
+
+        li {
+            border-right: 1px solid #ccc;
+            text-align: center;
+            font-size: 12px;
+            color: #8d8d8d;
+
+            &:last-child {
+                border-right: none;
+                font-size: 14px;
+            }   
+        }
+
+        .qrcode {
+            width: 228px;
+        }
+
+        .service {
+            width: 325px;
+        }
+
+        .help {
+            width: 180px;
+
+            
+        }
+
+        .login {
+            width: 242px;
+
+            a:first-child {
+                background-color: #e61e25;
+                color: #fff;
+                border-radius: 3px;
+                padding: 4px 8px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+}
+
+// 主导航
+.navs {
+    height: 64px;
+    line-height: 64px;
+    border-bottom: 1px solid #ccc;
+
+    ul {
+        width: 980px;
+        height: 100%;
+        margin: 0 auto;
+
+        li {
+            float: left;
+            padding: 0 15px;
+
+            a {
+                display: block;
+
+                &:not(.pic):hover {
+                    color: #333;
+                    border-bottom: 3px solid #e61e25;
+                }
+            }
+
+            &:last-child {
+                margin-left: 100px;
+            }
+
+            img {
+                width: 145px;
+                margin-top: 15px;
+            }
+
+        }
+    }
+} 
+
+// 轮播图 
+.swipe {
+	width: 100%;
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+
+	.swipe-wrap {
+		overflow: hidden;
+		position: relative;
+	}
+	
+	li {
+		height: 352px;
+		float: left;
+		width: 100%;
+		position: relative;
+	}
+
+	li:first-child {
+		background-color: red;
+	}
+
+	li:nth-child(2) {
+		background-color: blue;
+	}
+
+	li:last-child {
+		 background-color: pink;
+	}
+}
+
+// 主营介绍
+.major_wrap {
+    border-bottom: 1px solid #ccc;
+
+    .major {
+        max-width: 1170px;
+        padding: 24px 0px;
+        margin: 0 auto;
+    
+        .wrap {
+            width: 100%;
+            display: flex;
+    
+            dl {
+                flex: 1;
+                padding: 0 15px;
+    
+                dt {
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+    
+                dd {
+                    line-height: 1.5;
+                    font-size: 14px;
+    
+                    span {
+                        font-size: 20px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 通知
+.notify {
+	font-size: 14px;
+	border-bottom: 1px solid #c6cbcf;
+
+	ul {
+		max-width: 1170px;
+		padding: 15px 0;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	li {
+		padding: 0 15px;
+		margin: 8px 0;
+	}
+
+	span {
+		color: #efb513;
+	}
+
+	a.qa {
+		color: #428bca;
+		margin: 0 20px;
+	}
+
+	a.apply {
+		color: #efb513;
+		border-bottom: 1px dashed #efb513;
+	}
+
+	.minute {
+		position: absolute;
+		right: 100px;
+		top: 50%;
+		margin: -19px;
+
+		img {
+			width: auto;
+			height: 38px;
+		}
+	}
+}
+
+// 借贷
+.loan {
+    padding-top: 20px;
+    background-image: url("../images/box-style-bg.png");
+
+    .loan_wrap {
+        max-width: 1170px;
+        padding: 0 15px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    // 导航栏
+    ul {
+        // min-width: 580px;
+        height: 50px;
+        padding-left: 15px;
+        border-bottom: 1px solid #ccc;
+        font-size: 15px;
+
+        li {
+            display: inline-block;
+            padding: 6px 18px;
+            margin-right: 15px;
+            line-height: 38px;
+            text-align: center;
+
+            a {
+                color: #333;
+            }
+        }
+
+        .active {
+            border-bottom: 3px solid #e61e25;
+        }
+    }
+
+    // 借贷信息
+    .info {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+        margin-top: 15px;
+        background-color: #fff;
+        font-size: 14px;
+        box-shadow: 2px 2px 2px #d8d8d8;
+        border-radius: 3px;
+        position: relative;
+
+        b {
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            position: absolute;
+            top: -6px;
+            left: 50px;
+            transform: rotate(45deg);
+        }
+    }
+
+    // 微收益列表
+    .items {
+        padding-top: 15px;
+        text-align: justify;
+
+        .item {
+            width: 31.5%;
+            height: 150px;
+            display: inline-block;
+            padding: 10px 110px 10px 0;
+            position: relative;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            overflow: hidden;
+
+            i {
+                display: block;
+                width: 26px;
+                height: 24px;
+                background-image: url("../images/novice.png");
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            dl {
+                padding: 0 15px;
+
+                dt {
+                    color: #fff;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+
+                }
+
+                .title {
+                    color: #fff;
+                    opacity: 0.5;
+                    font-size: 12px;
+                    line-height: 2.2;
+                    overflow: hidden;
+
+                    .left {
+                        float: left;
+                    }
+
+                    .right {
+                        float: right;
+                    }
+                }
+
+                .money {
+                    color: #fff;
+                    font-size: 18px;
+                    overflow: hidden;
+
+                    .left {
+                        float: left;
+
+                        m {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .right {
+                        float: right;
+                    }
+                }
+            }
+            .brief {
+
+                dt {
+                    color: #2c3e50;
+                }
+
+                .title {
+                    color: #999;
+                }
+
+                .money {
+                    color: #333;
+                }
+            }
+
+            // 年利率
+            .rate {
+                width: 110px;
+                height: 100%;
+                border-left: 1px dashed #d5d5d5;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 10px 0 0 2px;
+                box-sizing: border-box;
+                text-align: center;
+
+
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 6px;
+                    background-color: #f0f0f0;
+                    position: absolute;
+                    left: -6px;
+                }
+
+                &:before {
+                    top: -6px;
+                }
+
+                &:after {
+                    bottom: -6px;
+                }
+
+                .flags {
+                    width: 100%;
+                    height: 45px;
+                }
+
+                h6 {
+                    font-size: 30px;
+                    color: #fff;
+
+                    d {
+                        font-size: 14px;
+                    }
+                }
+
+                h5 {
+                    color: #e61e25;
+                    font-size: 30px;
+                    
+                    d {
+                        font-size: 14px;
+                    }
+                }
+
+                p {
+                    color: #fff;
+                    font-size: 14px;
+                    padding-top: 6px;
+                }
+                n {
+                    color: #fff;
+                    font-size: 14px;
+                    padding-top: 6px;
+                }
+            }
+
+            .flags {
+                
+                span {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    text-align: center;
+                    line-height: 16px;
+                    font-size: 12px;
+                }
+                .e {
+                    border: 1px solid #399;
+                    color: #399;
+                }
+                .b {
+                    border: 1px solid #f56854;
+                    color: #f56854;
+                }
+            }
+
+            .extra{
+                b {
+                    display: block;
+                    color: #721786;
+                }
+
+                span {
+                    display: block;
+                    color: #999;
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+            }
+        }
+        .red {
+            background-color: #e61e25;
+        }
+        .done {
+            background-color: #E6E6E6;
+            position: relative;
+
+            // 已满标图片
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url("../images/loan-status-5.png") center no-repeat;
+                background-size: auto 80%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }      
+        .bank {
+            width: 31.5%;
+            height: 0;
+            display: inline-block;
+            overflow: hidden;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+// 全部新闻
+.news {
+    max-width: 1170px;
+    padding: 30px 0 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .title{
+        width: 100px;
+        padding:  0 0 10px 15px;
+        border-bottom: 1px solid #ccc;
+        margin-left: 110px;
+        float: left;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            right: -10px;
+            bottom: -5px;
+        }
+    }
+
+    .types {
+        float: left;
+        margin-left: 40px;
+        position: relative;
+
+        span {
+            display: block;
+            width: 55px;
+            height: 55px;
+            background-color: #d0d0d0;
+            border-radius: 50%;
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 10;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 100%;
+            border-left: 1px dashed #ccc;
+            position: absolute;
+            top: 0;
+            left: 27px;
+        }
+        .active {
+            background-color: #e61e25;
+        }
+
+    }
+
+    .list {
+        float: left;
+        margin-left: 50px;
+
+        li {
+            font-size: 14px;
+            margin: 15px 0;
+            line-height: 2;
+
+            a {
+                color: #444;
+            }
+        }
+    }
+}
+
+// 底部
+.footer {
+    margin-top: 30px;
+    
+    // 底部导航
+    .footer_navs {
+        height: 45px;
+        border-top: 1px solid #dedede;
+        font-size: 14px;
+        line-height: 45px;
+        display: flex;
+        justify-content: center;
+        
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            
+            a {
+                display: inline-block;
+                margin: 0 5px;
+                color: #666;
+            }
+
+            &:last-child {
+
+                a {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    background-color: #d0d0d0;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    // 版权
+    .copy {
+        background-color: #333;
+        overflow: hidden;
+
+        p {
+            font-size: 12px;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .pic {
+            margin: 10px 0 30px;
+            text-align: center;
+
+            img {
+                width: auto;
+                height: 42px;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+// 平板小于等于979px
+@media (max-width: 979px) {
+    // 顶部导航
+    .topnavs {
+        .qrcode {
+            display: none;
+        }
+        ul {
+            width: 750px;
+        }
+    }
+    // 主体导航
+    .navs {
+
+        ul {
+            width: 750px;
+        }
+
+        li:last-child {
+            display: none;
+        }
+    }
+    // 主营介绍
+    .major {
+        width: 750px;
+    }
+    // 通知
+    .notify {
+
+        ul {
+            max-width: 750px;
+        }
+        .minute {
+			display: none;
+		}
+    }
+    // 借贷
+    .loan {
+
+        .loan_wrap {
+            max-width: 750px;
+            padding: 0 5px;
+
+            .tabs {
+
+                li {
+                    padding: 6px 10px;
+                }
+            }
+
+            .item {
+                width: 48%;
+            }
+        }
+    }
+    // 全部新闻
+    .news {
+        padding: 30px 15px 30px 10px;
+
+        .title, .types, .list {
+            float: none;
+        }
+
+        .title {
+            width: auto;
+            margin: 0;
+        }
+
+        .types {
+            margin: 0;
+            text-align: justify;
+
+            span {
+                display: inline-block;
+                margin: 25px 0 0;
+            }
+
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 0;
+                position: relative;
+            }
+        }
+
+        .list {
+            margin: 0;
+        }
+    }
+    // 底部
+    .footer {
+
+        // 底部导航
+        li:last-child {
+            display: none;
+        }
+    }
+}
+
+// 手机小于等于767px
+@media (max-width: 767px) {
+    // 顶部导航
+    .topnavs {
+        display: none;
+    }
+    // 主体导航
+    .navs {
+        display: none;
+    }
+    // 手机导航
+    .telnavs {
+        display: block;
+        width: 100%;
+        height: 57px;
+        line-height: 57px;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ccc;
+        padding: 0 20px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        a {
+            color: #586a80;
+        }
+        a:last-child {
+            float: right;
+        }
+
+        .menu {
+            float: left;
+            background: url("../images/menu.png") left center no-repeat;
+            padding-left: 30px;
+        }
+    }
+    // 主营介绍
+    .major_wrap {
+        display: none;
+    }
+    // 通知
+    .notify {
+
+		ul {
+            padding: 5px 0;
+            
+            li {
+                padding-left: 10px;
+            }
+		}
+    }
+    // 借贷
+    .loan {
+
+        .loan_wrap {
+
+            .tabs {
+    
+                li {
+                    padding: 6px 10px;
+                    margin-right: 10px;
+                }
+            }
+    
+            .item {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    // 底部
+    .footer {
+        display: none;
+    }
+}

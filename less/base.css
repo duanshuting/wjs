@@ -1,0 +1,19 @@
+body,
+ul,
+li,
+dl,
+dt,
+dd,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #8d8d8d;
+}
